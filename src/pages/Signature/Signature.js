@@ -6,7 +6,7 @@ import logo from '../../assets/logo.png'
 
 const Signature = () => {
   const location = useLocation();
-  const { email, position, name, officeNr } = location.state || {};
+  const { email, position, name, officeNr,platforms,socialLinks } = location.state || {};
   const [copySuccess, setCopySuccess] = useState('');
 
   useEffect(() => {
@@ -47,13 +47,39 @@ const Signature = () => {
                   />
                 </td>
                 <td style={{ borderLeft: '1px solid #ddd', paddingLeft: '10px' }}>
-                <img src='https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png' width={30} height={30}/>
                 <strong>{name}</strong><br />
                  {position}<br />
                   <a href={`mailto:${email}`} style={{ color: '#0073e6' }}>{email}</a><br />
                   {officeNr}<br />
                   Deltageul 13, 3251NG Stellendam<br />
                   <a href="https://dspeople.nl" style={{ color: '#0073e6' }}>dspeople.nl</a>
+                </td>
+                <td>
+             {/* Check for selected platforms and show only those */}
+          {platforms.instagram && socialLinks.instagram && (
+            <div>
+              <p><strong>Instagram Username:</strong> {socialLinks.instagram}</p>
+            </div>
+          )}
+          
+          {platforms.facebook && socialLinks.facebook && (
+            <div>
+              <p><strong>Facebook Username:</strong> {socialLinks.facebook}</p>
+            </div>
+          )}
+
+          {platforms.linkedin && socialLinks.linkedin && (
+            <div>
+              <p><strong>LinkedIn Username:</strong> {socialLinks.linkedin}</p>
+            </div>
+          )}
+                    <ul className="ulelel">
+                        <li>t</li>
+                        <li>e</li>
+                        <li>s</li>
+                        <li>t</li>
+
+                    </ul>
                 </td>
               </tr>
             
@@ -64,6 +90,7 @@ const Signature = () => {
         {/* Copy Button */}
        
       </div>
+      
       <button className="copy-button">Copy Signature</button>
       {copySuccess && <p className="copy-success">{copySuccess}</p>}
     </div>

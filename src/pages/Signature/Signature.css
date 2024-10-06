@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     padding: 20px;
+    justify-items: center;
+    align-items: center;
   }
   
   .signature-container {
     border: 1px solid #ddd;
     padding: 20px;
     background-color: #f9f9f9;
+    width: 450px;
   }
   
   .signature-content {
@@ -36,3 +39,10 @@
     color: #4caf50;
   }
   
+  .ulelel{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
