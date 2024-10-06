@@ -2,13 +2,15 @@ import React, { useRef, useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Clipboard from 'clipboard';
 import './Signature.css';
+import logo from '../../assets/logo.png'
 
 const Signature = () => {
   const location = useLocation();
-  const { email } = location.state || {};
+  const { email, position, name, officeNr } = location.state || {};
   const [copySuccess, setCopySuccess] = useState('');
 
   useEffect(() => {
+    console.log(email,position,name,officeNr)
     // Initialize Clipboard.js on the Copy button
     const clipboard = new Clipboard('.copy-button', {
       target: () => document.querySelector('.signature-content'),
@@ -39,28 +41,31 @@ const Signature = () => {
               <tr>
                 <td style={{ paddingRight: '10px' }}>
                   <img 
-                    src="https://path-to-your-logo/logo.png" 
+                    src={logo} 
                     alt="DS People" 
                     style={{ width: '100px' }} 
                   />
                 </td>
                 <td style={{ borderLeft: '1px solid #ddd', paddingLeft: '10px' }}>
-                  <strong>Corina Paraschiv</strong><br />
-                  DS People B.V.<br />
+                <img src='https://www.iconpacks.net/icons/2/free-location-icon-2955-thumb.png' width={30} height={30}/>
+                <strong>{name}</strong><br />
+                 {position}<br />
                   <a href={`mailto:${email}`} style={{ color: '#0073e6' }}>{email}</a><br />
-                  +31187-745111<br />
+                  {officeNr}<br />
                   Deltageul 13, 3251NG Stellendam<br />
                   <a href="https://dspeople.nl" style={{ color: '#0073e6' }}>dspeople.nl</a>
                 </td>
               </tr>
+            
             </tbody>
           </table>
         </div>
 
         {/* Copy Button */}
-        <button className="copy-button">Copy Signature</button>
-        {copySuccess && <p className="copy-success">{copySuccess}</p>}
+       
       </div>
+      <button className="copy-button">Copy Signature</button>
+      {copySuccess && <p className="copy-success">{copySuccess}</p>}
     </div>
   );
 };
