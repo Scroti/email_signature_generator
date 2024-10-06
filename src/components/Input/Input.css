@@ -1,0 +1,28 @@
+/* src/components/Input.css */
+.input-wrapper {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-wrapper label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .input-wrapper input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .input-wrapper input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .input-wrapper input.error {
+    border-color: red;
+  }
+  
