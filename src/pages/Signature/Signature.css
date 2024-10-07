@@ -1,48 +1,102 @@
 .details-container {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .signature-container {
-    border: 1px solid #ddd;
-    padding: 20px;
-    background-color: #f9f9f9;
-    width: 450px;
-  }
-  
-  .signature-content {
-    display: inline-block;
-  }
-  
-  .copy-button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
-  }
-  
-  .copy-button:hover {
-    background-color: #45a049;
-  }
-  
-  .copy-success {
-    margin-top: 10px;
-    font-size: 0.9rem;
-    color: #4caf50;
-  }
-  
-  .ulelel{
-    text-decoration: none;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color:grey;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.signature-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+  width: 500px;
+  height:400px;
+  text-align: center; /* Center the text inside the container */
+}
+
+.signature-content {
+  display: inline-block;
+  text-align: left; /* Aligns text to the left for readability */
+  margin: 0 auto;   /* Centers the content */
+}
+
+.signature-content table {
+  width: 100%; /* Ensures the table takes full width for better alignment */
+}
+
+.signature-content td {
+  vertical-align: middle; /* Centers content vertically */
+}
+
+.signature-content img {
+  vertical-align: middle; /* Ensures icons align with text */
+}
+
+.copy-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #45a049;
+}
+
+.copy-success {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #4caf50;
+}
+
+/* Centering the email, phone, and address */
+.icon-text-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers icons and text horizontally */
+  margin-bottom: 5px;
+}
+
+.icon-text-row img {
+  margin-right: 5px;
+}
+
+/* Flex column for social links */
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Arrange social media links vertically */
+  align-items: center;
+  justify-content: center; /* Center the icons */
+  margin-left: 20px;
+  height: 100%;
+  gap: 10px; /* Adds spacing between the social media icons */
+}
+
+.social-links a {
+  display: block;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s;
+}
+/* Styles to remove the default link color and underline */
+a {
+  color: inherit; /* Inherit the color from the parent element */
+  text-decoration: none; /* Remove underline */
+}
+
+/* You can also specifically style only the phone and email links if needed */
+.icon-text-row a {
+  color: inherit; /* Ensure phone/email links inherit the parent text color */
+  text-decoration: none; /* Remove underline */
+}
