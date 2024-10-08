@@ -10,8 +10,7 @@
 .signature-container {
   border: 1px solid #ddd;
   padding: 20px;
-  background-color: #f9f9f9;
-  width: 500px;
+  width: 600px;
   height:400px;
   text-align: center; /* Center the text inside the container */
 }
@@ -99,4 +98,8 @@ a {
 .icon-text-row a {
   color: inherit; /* Ensure phone/email links inherit the parent text color */
   text-decoration: none; /* Remove underline */
+}
+
+.social-icon{
+  width:25px; 
 }
